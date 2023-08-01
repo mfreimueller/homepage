@@ -1,19 +1,12 @@
 baseURL = 'https://mfreimueller.com/'
 languageCode = 'de'
 title = 'Michael Freimüller'
-Copyright = 'Copyright 2023 Michael Freimüller Released under Creative Commons Zero v1.0 Universal license'
-theme = 'arete'
+Copyright = 'Copyright © 2023 Michael Freimüller'
 
 [Params]
 author = 'Michael Freimüller'
 ShowThemeInfo = true
-mainSections = ['meme','post']
 
 [mediaTypes]
 [mediaTypes.'application/rss+xml']
 suffixes = ['xml']
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true

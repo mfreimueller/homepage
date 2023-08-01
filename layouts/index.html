@@ -4,13 +4,17 @@
 {{ partial "head.html" . }}
 
 <body>
-	<header>
-		Michael Freimüller's persönlicher Blog
-	</header>
     <main>
-        {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
-			{{ partial "list-item" . }}
-		{{ end }}
+        <img src="/images/profile.png" alt="It's me, Michael!">
+		<h1>Michael Freimüller</h1>
+		<blockquote>
+			- sum ergo sic -
+		</blockquote>
+		<ul>
+			<li>
+				<a href="https://gedankenpunkt.com">Gedankenpunkt.</a>
+			</li>
+		</ul>
     </main>
 </body>
 
