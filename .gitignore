@@ -17,3 +17,5 @@
 # Hugo
 
 public/
+
+deploy.sh
