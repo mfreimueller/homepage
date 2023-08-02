@@ -16,6 +16,7 @@
 
 # Hugo
 
+.hugo_build.lock
 public/
 
 deploy.sh
