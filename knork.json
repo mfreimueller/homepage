@@ -1,0 +1,6 @@
+{
+	"template": "hugo",
+	"variables": {
+		"path": "/home/mf9501/html/"
+	}
+}

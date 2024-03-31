@@ -1,30 +1,20 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	background: #FFFFF0;
-	color: #535353;
+	background: #FFF;
 }
 
 main {
-	padding: 32px 16px;
-
 	display: flex;
 	flex-direction: column;
 }
 
-h1 {
-	font-weight: lighter;
-}
-
 ul {
-	list-style-type: none;
-
-	padding: 0;
-	margin: 0;
+	list-style-position: inside;
+	text-indent: -1em;
 }
 
-li {
-	font-size: 24px;
-	font-weight: lighter;
+li:not(:last-child) {
+	margin-bottom: 8px;
 }
 
 blockquote {
@@ -42,7 +32,7 @@ blockquote {
 	justify-content: space-evenly;
 }
 
-.grid > * {
+.grid>* {
 	font-size: 24px;
 	font-weight: lighter;
 	width: 50%;
@@ -63,7 +53,7 @@ img {
 		flex-direction: column;
 	}
 
-	.grid > * {
+	.grid>* {
 		width: 100%;
 	}
 }
