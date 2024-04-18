@@ -179,6 +179,7 @@ section.content > p:first-of-type::first-letter {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	line-height: normal;
 }
 
 .row {
@@ -189,6 +190,33 @@ section.content > p:first-of-type::first-letter {
 .row span:first-child {
 	min-width: 100px;
 	text-align: center;
+}
+
+.table.wider .row span:first-child {
+	min-width: 200px;
+}
+
+.row > span {
+	display: flex;
+	flex-direction: column;
+}
+
+.row > span > span {
+	font-size: small;
+}
+
+.row > span > span.description {
+	text-align: left;
+}
+
+.row > span.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.row > span.list > span {
+	font-size: medium;
+	text-align: left;
 }
 
 .mobile {
@@ -249,5 +277,10 @@ section.content > p:first-of-type::first-letter {
 	.row span:first-child {
 		min-width: unset;
 		text-decoration: underline;
+	}
+
+	.row span:not(:first-child) span {
+		text-align: unset;
+		text-decoration: none;
 	}
 }
