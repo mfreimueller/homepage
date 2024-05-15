@@ -6,8 +6,28 @@
 <body>
 	{{ partial "header.html" . }}
     <main>
-		{{ .Content }}
+      <article>
+        {{ .Content }}
+        <ul class="article-list">
+        {{ range .Site.RegularPages -}}
+          {{ if not .Params.private }}
+            {{ partial "list-item" . }}
+          {{ end }}
+        {{ end -}}
+        </ul>
+      </article>
     </main>
 </body>
+
+<script defer>
+  var articleLinks = document.getElementsByClassName("article-link");
+  for (var idx = 0; idx < articleLinks.length; idx++) {
+      var articleLink = articleLinks.item(idx);
+
+      articleLink.addEventListener("click", function () {
+          location.href = this.getAttribute("data-link", "_self");
+      });
+  }
+</script>
 
 </html>

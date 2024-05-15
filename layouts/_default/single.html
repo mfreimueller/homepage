@@ -8,6 +8,11 @@
     <main>
         <article>
             {{ .Content }}
+            {{ if not .Params.private }}
+            <div class="meta">
+                {{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}, Michael Freimüller
+            </div>
+            {{ end }}
         </article>
     </main>
 </body>

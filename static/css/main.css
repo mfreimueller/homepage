@@ -8,9 +8,14 @@ body {
 
 header {
 	display: flex;
-	flex-direction: column;
-	align-content: center;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	padding: 16px;
+}
+
+h1 {
+	font-size: large;
 }
 
 nav {
@@ -48,6 +53,10 @@ article {
 	width: 100%;
 }
 
+article .meta {
+	text-align: right;
+}
+
 .info {
 	font-weight: 300;
 	font-size: 16px;
@@ -63,15 +72,6 @@ article {
 
 .bold {
 	font-weight: bold;
-}
-
-footer .grid {
-	display: flex;
-	flex-direction: row;
-	margin: 0 12px;
-	font-weight: 300;
-	font-size: 16px;
-	justify-content: space-around;
 }
 
 .grid div,
@@ -91,13 +91,6 @@ footer .grid {
 
 .capitalize {
 	text-transform: capitalize;
-}
-
-footer:before {
-	content: ' ';
-	display: block;
-	border: 1px solid black;
-	width: 100%;
 }
 
 .citation {
@@ -139,14 +132,16 @@ footer:before {
 .article-link {
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
+	border-top: 1px dotted #6d6d6d;
+	border-bottom: 1px dotted #6d6d6d;
 	padding: 8px;
 	cursor: pointer;
 	margin: 0 0 12px 0;
 }
 
-.article-link:hover {
-	box-shadow: 5px 10px #000;
+ul.article-list {
+	list-style-position: initial;
+	text-indent: 0;
 }
 
 .article-link.no-box {
@@ -253,10 +248,6 @@ section.content > p:first-of-type::first-letter {
 
 	.article-list li {
 		margin: 16px;
-	}
-
-	footer .grid {
-		flex-direction: column;
 	}
 
 	.grid div,

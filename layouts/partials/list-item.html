@@ -1,0 +1,5 @@
+<li class="article-link" data-link="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="summary">{{ .Summary }}</span>
+    <span class="pubdate">{{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}</span>
+</li>
