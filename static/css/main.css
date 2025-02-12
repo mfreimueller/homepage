@@ -11,12 +11,67 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 16px;
+	padding: 8px 16px 0 16px;
+}
+
+.timetable {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.entry {
+	display: flex;
+	flex-direction: row;
+}
+
+.entry > :first-child {
+	font-size: large;
+	font-weight: lighter;
+	width: 25%;
+	max-width: 250px;
+	text-align: center;
+}
+
+.entry > :not(:first-child) {
+	width: 75%;
+}
+
+.entry .title {
+	font-size: large;
+}
+
+.entry .description {
+	font-weight: lighter;
+}
+
+.entry .location {
+	font-size: smaller;
+	font-weight: lighter;
+}
+
+.entry .timespan {
+	font-weight: lighter;
+}
+
+.events {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.events.small-gap {
+	gap: 2px;
 }
 
 h1 {
+	font-size: larger;
+}
+
+h2 {
 	font-size: large;
 }
+
 
 nav {
 	margin: 0 12px;
@@ -42,15 +97,15 @@ blockquote+blockquote {
 
 main {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 32px 16px;
+	flex-direction: row;
+	/*align-items: center;*/
+	padding: 0 16px 0 16px;
 }
 
 article {
-	max-width: 800px;
 	line-height: 26px;
-	width: 100%;
+	padding-bottom: 16px;
+	/*width: 100%;*/
 }
 
 article .meta {
@@ -163,13 +218,6 @@ ul.article-list {
 	font-style: italic;
 }
 
-section.content > p:first-of-type::first-letter {
-	font-size: 270%;
-	padding: 6px 3px;
-	margin-right: 6px;
-	float: left;
-}
-
 .table {
 	display: flex;
 	flex-direction: column;
@@ -225,11 +273,17 @@ section.content > p:first-of-type::first-letter {
 
 	header {
 		padding-bottom: 8px;
+		flex-direction: column;
+		justify-content: unset;
+		align-items: unset;
 	}
 
 	nav {
-		flex-direction: column;
-		align-items: center;
+		margin: 0;
+		align-items: baseline;
+		justify-content: left;
+		gap: 24px;
+		font-size: large;
 	}
 
 	.mobile {
@@ -273,5 +327,30 @@ section.content > p:first-of-type::first-letter {
 	.row span:not(:first-child) span {
 		text-align: unset;
 		text-decoration: none;
+	}
+
+	.entry {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.entry .year {
+		width: 100%;
+		font-size: larger;
+		max-width: unset;
+	}
+
+	.entry .events {
+		width: 100%;
+	}
+
+	.timetable {
+		gap: 32px;
+		padding-bottom: 32px;
+	}
+
+	article > h1 {
+		text-align: center;
+		width: 100%;
 	}
 }
