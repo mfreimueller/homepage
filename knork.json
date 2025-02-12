@@ -1,5 +1,5 @@
 {
-	"template": "hugo",
+	"template": "deploy",
 	"variables": {
 		"path": "/home/mf9501/html/"
 	}
