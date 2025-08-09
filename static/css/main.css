@@ -82,5 +82,23 @@ blockquote+blockquote {
 }
 
 @media (max-width: 800px) {
-	
+	body {
+		margin: 12px;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	header h1 {
+		font-size: x-large;
+	}
+
+	header .link {
+		align-self: baseline;
+	}
+
+	.post {
+		grid-template-columns: auto;
+	}
 }
