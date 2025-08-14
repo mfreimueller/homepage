@@ -10,7 +10,12 @@
             {{ .Content }}
             {{ if not .Params.private }}
             <div class="meta">
-                {{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}, Michael Freimüller
+                <span>
+                    {{ partial "date.html" (dict "date" .PublishDate "monate" $.Site.Data.months) }}
+                </span>
+                <span>
+                    Kontakt: michael [ at ] mfreimueller [ dot ] com
+                </span>
             </div>
             {{ end }}
         </article>

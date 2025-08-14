@@ -23,6 +23,15 @@ header img {
 	height: 1em;
 }
 
+main {
+	padding-bottom: 20px;
+}
+
+.meta {
+	display: flex;
+	justify-content: space-between;
+}
+
 a,
 a:visited {
 	color: #5aa8c8;
@@ -100,5 +109,9 @@ blockquote+blockquote {
 
 	.post {
 		grid-template-columns: auto;
+	}
+
+	.meta {
+		flex-direction: column;
 	}
 }
